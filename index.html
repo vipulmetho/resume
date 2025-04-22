@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vipul Mehto - Cybersecurity Professional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #64748b;
+      --accent: #10b981;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      color: var(--dark);
+      background-color: #f1f5f9;
+      padding: 20px;
+    }
+    
+    .resume-container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: white;
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+    }
+    
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(to bottom left, transparent 49%, white 50%);
+    }
+    
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+    }
+    
+    .tagline {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      font-weight: 300;
+      margin-bottom: 15px;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .contact-item i {
+      font-size: 1rem;
+    }
+    
+    main {
+      padding: 50px 40px;
+    }
+    
+    section {
+      margin-bottom: 40px;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e2e8f0;
+      position: relative;
+    }
+    
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 80px;
+      height: 2px;
+      background: var(--accent);
+    }
+    
+    h3 {
+      font-size: 1.2rem;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .card {
+      background: var(--light);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border-left: 4px solid var(--primary);
+    }
+    
+    ul {
+      list-style-type: none;
+    }
+    
+    li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 20px;
+    }
+    
+    li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    
+    .skill-item {
+      margin-bottom: 15px;
+    }
+    
+    .skill-name {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    
+    .skill-bar {
+      height: 8px;
+      background: #e2e8f0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .skill-level {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      border-radius: 4px;
+    }
+    
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      background: var(--primary-light);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 25px;
+    }
+    
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid white;
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+    
+    .timeline-date {
+      font-size: 0.85rem;
+      color: var(--gray);
+      margin-bottom: 5px;
+    }
+    
+    .timeline-title {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    
+    .timeline-subtitle {
+      color: var(--gray);
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 15px;
+    }
+    
+    .tag {
+      background: #e2e8f0;
+      color: var(--dark);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-family: 'Roboto Mono', monospace;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--dark);
+      color: white;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      header {
+        padding: 30px 20px;
+      }
+      
+      main {
+        padding: 30px 20px;
+      }
+      
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <a href="./d.css"></a>
+  <div class="resume-container">
+    <header>
+      <img src="https://i.pinimg.com/200x/c5/a2/6d/c5a26df1e7b9f223431117a332955b70.jpg" alt="Vipul Mehto" class="profile-img">
+      <h1>Vipul Mehto</h1>
+      <p class="tagline">Cybersecurity Specialist | Ethical Hacker | Digital Forensics</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-birthday-cake"></i>
+          <span>February 11, 2003</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>India</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>vipul.mehto@example.com</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+91 XXXXXXXXXX</span>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <div class="card">
+          <p>Passionate cybersecurity professional with certifications in ethical hacking and digital forensics. Seeking opportunities to apply my technical skills in protecting digital assets and infrastructure. Strong foundation in computer applications with continuous drive to learn and implement new security technologies.</p>
+        </div>
+      </section>
+      
+      <section>
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2023 - 2026</div>
+            <h3 class="timeline-title">Bachelor of Computer Applications (BCA)</h3>
+            <p class="timeline-subtitle">IGNOU, India</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2021</div>
+            <h3 class="timeline-title">12th Grade (Senior Secondary)</h3>
+            <p class="timeline-subtitle">Dr. S.R.S. Mission School, CBSE</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2019</div>
+            <h3 class="timeline-title">10th Grade (Secondary)</h3>
+            <p class="timeline-subtitle">Dr. S.R.S. Mission School, CBSE</p>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <h2>Skills & Certifications</h2>
+        <div class="grid-container">
+          <div class="card">
+            <h3>Cybersecurity</h3>
+            <ul>
+              <li>Certified Ethical Hacker (CEH)</li>
+              <li>Computer Hacking Forensic Investigator (CHFI)</li>
+              <li>Microsoft Certified Professional (MCP)</li>
+              <li>CompTIA A+ Certified</li>
+              <li>CompTIA Network+ Certified</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Technical Skills</h3>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Python</span>
+                <span>Intermediate</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Network Security</span>
+                <span>Intermediate</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>Digital Forensics</span>
+                <span>Basic</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">
+                <span>MS Office Suite</span>
+                <span>Advanced</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <h2>Projects & Achievements</h2>
+        <div class="card">
+          <ul>
+            <li>Completed multiple Capture The Flag (CTF) challenges in cybersecurity competitions</li>
+            <li>Developed Python scripts for automating security tasks and vulnerability scanning</li>
+            <li>Participated in national-level cybersecurity workshops and seminars</li>
+            <li>Created educational content about basic cybersecurity practices for peers</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">CEH</span>
+            <span class="tag">CHFI</span>
+            <span class="tag">Security</span>
+            <span class="tag">Forensics</span>
+          </div>
+        </div>
+      </section>
+      
+      <section>
+        <h2>Interests & Hobbies</h2>
+        <div class="grid-container">
+          <div class="card">
+            <h3>Technical Interests</h3>
+            <ul>
+              <li>Ethical hacking techniques</li>
+              <li>Network security</li>
+              <li>Digital forensics</li>
+              <li>Emerging cybersecurity threats</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Personal Hobbies</h3>
+            <ul>
+              <li>Manga and anime with tech themes</li>
+              <li>Strategy video games</li>
+              <li>Digital art and painting</li>
+              <li>Cybersecurity blogs and podcasts</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2023 Vipul Mehto | Portfolio available upon request</p>
+    </footer>
+  </div>
+</body>
+</html>
